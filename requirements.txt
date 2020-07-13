@@ -1,0 +1,5 @@
+redis
+Django
+celery
+Pillow
+django-widget-tweaks

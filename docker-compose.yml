@@ -1,0 +1,17 @@
+version: '3'
+services:
+  django:
+    build: .
+    ports:
+      - "8000:8000"
+    volumes:
+      - ./django:/django
+    command: >
+      sh -c "sleep infinity"
+    depends_on:
+      - redis
+
+  redis:
+    image: "redis:alpine"
+    ports:
+      - "6379:6379"
